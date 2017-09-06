@@ -18,7 +18,7 @@ function count(a,b){
 		}
 	},1000)
 }
-count(1,10) //1、2、3....9
+count(1,10) //1、2、3....10
 ```
 有效地利用`clearTimeout`和`clearInterval`可以实现节流函数。切换到下一个使用场景。在操作页面时，监听的事件过于频繁，如
 - 歌曲搜索时，实时展示搜索结果
@@ -27,3 +27,4 @@ count(1,10) //1、2、3....9
 
 举例歌曲搜索，每次监听输入框中的`input`事件，获取`value`，像后台发生Ajax请求，每次用户的输入都会被监听，结果会频繁地发送Ajax请求，大大降低性能。
 #### 通过上面的示例我们可以利用`setTimeou`，延迟AJAX的发送时间，并如果用户在这段时间内重复操作，利用`clearTimeout`清除定时器，阻止发送AJAX.
+[预览链接](https://chenshangshuo.github.io/JSBasis/timer/test.html)
